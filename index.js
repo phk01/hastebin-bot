@@ -8,4 +8,6 @@ client.events = new Discord.Collection();
     require(`./handlers/${handler}`)(client, Discord)
 })
 
-client.login('ODQ5MzExNDY2MzQ3NjkyMDUz.YLZU8Q.Rx_-uHaBolS4aPHO-A-jwbHxKlM')
+let token = require('./handlers/constants').config
+
+client.login(token.token)

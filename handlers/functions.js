@@ -1,5 +1,8 @@
+let Discord = require(`./constants`).Discord
+let config = require(`./constants`).config
+
 function checkcommand(message, client) {
-    const prefix = '!';
+    const prefix = config.prefix
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
@@ -10,5 +13,5 @@ function checkcommand(message, client) {
 }
 
 module.exports = { 
-    checkcommand: checkcommand
+    checkcommand
 };
